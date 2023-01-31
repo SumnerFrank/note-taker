@@ -1,12 +1,12 @@
 const path = require('path');
-const notes = require('/Users/frank/Desktop/bootcamp/note-taker/db/db.json')
-const uuid = require('/Users/frank/Desktop/bootcamp/note-taker/helpers/uuid.js')
+const notes = require('../../db/db')
+const uuid = require('../../helpers/uuid')
 const router = require('express').Router();
 const fs = require('fs');
-const createNote = require('../../lib/index.js');
-// const deleteNote = require('../../lib/index.js');
-const showNotes = require('../../lib/index.js');
-const findID = require('../../lib/index.js');
+const createNote = require('../../lib/index');
+const deleteNote = require('../../lib/index');
+const showNotes = require('../../lib/index');
+const findID = require('../../lib/index');
 
 
 router.get('/', (req,res) => {
