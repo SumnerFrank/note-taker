@@ -7,3 +7,6 @@ Deleted notes are gone forever, sorry.
 
 ## Deployment and Walkthrough
 <a href='https://frank-made-a-note-machine.herokuapp.com/'>Heroku Deployment</a>
+
+https://user-images.githubusercontent.com/115412068/216151750-699660c0-8f0d-41a1-82d0-85a987011e42.mp4
+
