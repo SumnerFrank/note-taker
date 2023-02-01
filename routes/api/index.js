@@ -1,26 +1,26 @@
 const path = require('path');
-const notes = require('../../db/db')
+const notes = require('../../db/db.json')
 const uuid = require('../../helpers/uuid')
 const router = require('express').Router();
 const fs = require('fs');
-const createNote = require('../../lib/index');
+const noteFunctions = require('../../lib/index');
 const deleteNote = require('../../lib/index');
 const showNotes = require('../../lib/index');
 const findID = require('../../lib/index');
 
 
-router.get('/', (req,res) => {
+router.get('/notes', (req,res) => {
     res.json(notes);
 });
 
-router.post('/', (req,res) => {
+router.post('/notes', (req,res) => {
     req.body.id = notes.length.toString()
-    const note = createNote(req.body, notes)
+    const note = noteFunctions.createNote(req.body, notes)
     res.json(note);
 });
 
-router.delete(':id', (req,res) => {
-    res.json(deleteNote(req.params.id, notes));
+router.delete('/notes/:id', (req,res) => {
+    res.json(noteFunctions.deleteNote(req.params.id, notes));
 });
 
 module.exports = router; 
